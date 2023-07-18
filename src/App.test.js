@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import FizzBuzz from './FizzBuzz';
 
 describe('FizzBuzz Component', () => {
-  test('renders FizzBuzz sequence from 1 to 100', () => {
+  test('Nombre compris entre 1 et 100', () => {
     render(<FizzBuzz />);
     
     for (let i = 1; i <= 100; i++) {
@@ -12,7 +12,7 @@ describe('FizzBuzz Component', () => {
     }
   });
 
-  test('renders Fizz for numbers divisible by 3 or contain digit 3', () => {
+  test('Divisible par 3', () => {
     render(<FizzBuzz />);
     
     const fizzNumbers = [3, 6, 9, 12, 13, 18, 21, 23, 27, 30];
@@ -23,7 +23,7 @@ describe('FizzBuzz Component', () => {
     });
   });
 
-  test('renders Buzz for numbers divisible by 5 or contain digit 5', () => {
+  test('Divisible par 5', () => {
     render(<FizzBuzz />);
     
     const buzzNumbers = [5, 10, 15, 25, 35, 40, 52, 55, 58, 59];
@@ -34,7 +34,7 @@ describe('FizzBuzz Component', () => {
     });
   });
 
-  test('renders FizzBuzz for numbers divisible by 3 and 5', () => {
+  test('Divisible par 3 et 5', () => {
     render(<FizzBuzz />);
     
     const fizzBuzzNumbers = [15, 30, 45, 60, 75, 90, 93, 95, 99];
